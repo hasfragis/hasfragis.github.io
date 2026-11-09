@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hasfragis · Digital evidence integrity</title>
+<meta name="description" content="Hasfragis seals digital evidence with SHA-256 and Merkle trees, records every hand-over in a signed ledger, and proves at any moment that nothing has changed.">
+<meta name="theme-color" content="#2b2e32">
+<meta property="og:title" content="Hasfragis · Digital evidence integrity">
+<meta property="og:description" content="Every file sealed, every hand-over signed, every change caught.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hasfragis.github.io/">
+<meta property="og:image" content="https://hasfragis.github.io/assets/img/overview.webp">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="alternate icon" href="favicon.png" type="image/png">
+<link rel="preload" href="assets/fonts/Oswald.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="nav" id="top">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top" aria-label="Hasfragis, back to top">
+      <span class="mark" aria-hidden="true"><span class="logo"></span></span>
+      <span class="word">Hasfragis</span>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#inside">Inside</a>
+      <a href="#security">Security</a>
+      <a href="#team">Team</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- hero -->
+  <section class="hero">
+    <canvas class="globe" data-line-globe data-color-a="#c6f135" data-color-b="#8fa0b0" data-lines="44" aria-hidden="true"></canvas>
+    <div class="wrap hero-in">
+      <p class="eyebrow">Digital evidence integrity</p>
+      <h1>Hasfragis</h1>
+      <p class="lede">Every file sealed, every hand-over signed, every change caught. Hasfragis keeps digital evidence provably untouched from the moment it is collected to the day it is presented.</p>
+      <div class="cta">
+        <a class="btn solid" href="#how">See how it works</a>
+        <a class="btn" href="#inside">Take the tour</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- facts strip -->
+  <section class="facts" aria-label="Hasfragis in numbers">
+    <div class="wrap facts-in">
+      <div class="fact hero-tile"><span class="n">SHA-256</span><span class="l">fingerprint of every evidence file</span></div>
+      <div class="fact"><span class="n">P-256</span><span class="l">ECDSA signature on every custody entry</span></div>
+      <div class="fact"><span class="n">60/60</span><span class="l">attack and tamper tests passing</span></div>
+      <div class="fact"><span class="n">1 zip</span><span class="l">per closed case, checkable on any computer</span></div>
+    </div>
+  </section>
+
+  <!-- problem -->
+  <section class="block" id="problem">
+    <div class="wrap">
+      <p class="eyebrow">The problem</p>
+      <h2>Evidence is only as good as its chain of custody</h2>
+      <div class="grid3">
+        <article class="card">
+          <h3>Files change quietly</h3>
+          <p>A single edited cell in a spreadsheet or a re-saved image looks exactly like the original. Without a seal, nobody can show it was not touched.</p>
+        </article>
+        <article class="card">
+          <h3>Custody gets disputed</h3>
+          <p>Who held the evidence, when, and who handed it to whom? Paper logs and shared drives leave gaps that are easy to challenge.</p>
+        </article>
+        <article class="card">
+          <h3>Checking means trusting someone</h3>
+          <p>Usually the only proof is a person's word. Hasfragis replaces that with mathematics anyone can re-run.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- how it works -->
+  <section class="block alt" id="how">
+    <div class="wrap">
+      <p class="eyebrow">How it works</p>
+      <h2>Four steps, every one recorded</h2>
+      <ol class="steps">
+        <li>
+          <span class="num">01</span>
+          <h3>Seal</h3>
+          <p>Files arrive in batches with a receipt each. Sealing hashes every file with SHA-256, builds a Merkle tree and signs its root into the custody ledger.</p>
+        </li>
+        <li>
+          <span class="num">02</span>
+          <h3>Hand over</h3>
+          <p>Custody moves only by a signed hand-over and a signed acceptance. Each entry links to the one before it, so nothing can be removed or reordered unseen.</p>
+        </li>
+        <li>
+          <span class="num">03</span>
+          <h3>Verify</h3>
+          <p>One click re-hashes the evidence and rebuilds the tree. A changed file breaks its path to the sealed root, and the dashboard shows exactly which one.</p>
+        </li>
+        <li>
+          <span class="num">04</span>
+          <h3>Package</h3>
+          <p>Closing a case files one zip: the sealed evidence, a proof for every file, the ledger, public keys, the signed report and a checker that runs anywhere.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- tour -->
+  <section class="block" id="inside">
+    <div class="wrap">
+      <p class="eyebrow">Inside the dashboard</p>
+      <h2>Take the tour</h2>
+      <p class="sub">Real screens from Hasfragis, running on fictional demo cases.</p>
+      <div class="tabs" role="tablist" aria-label="Dashboard screens">
+        <button role="tab" aria-selected="true" aria-controls="shot" data-shot="control">Control room</button>
+        <button role="tab" aria-selected="false" aria-controls="shot" data-shot="overview">Verified case</button>
+        <button role="tab" aria-selected="false" aria-controls="shot" data-shot="tampered">Tampered case</button>
+        <button role="tab" aria-selected="false" aria-controls="shot" data-shot="custody">Custody ledger</button>
+        <button role="tab" aria-selected="false" aria-controls="shot" data-shot="trace">Trace</button>
+        <button role="tab" aria-selected="false" aria-controls="shot" data-shot="cases">Cases</button>
+        <button role="tab" aria-selected="false" aria-controls="shot" data-shot="complainant">Complainant portal</button>
+        <button role="tab" aria-selected="false" aria-controls="shot" data-shot="signin">Sign-in</button>
+      </div>
+      <figure class="shot" id="shot" role="tabpanel">
+        <img id="shot-img" src="assets/img/control.webp" width="1600" height="1000" alt="The Control room: open cases, tamper flags, decisions waiting and the team">
+        <figcaption id="shot-cap">The Control room: everything waiting for a decision, every case and the team, at a glance.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- features -->
+  <section class="block alt" id="features">
+    <div class="wrap">
+      <p class="eyebrow">What it does</p>
+      <h2>Built for the whole life of a case</h2>
+      <div class="grid3">
+        <article class="card"><h3>Cases and batches</h3><p>Each case has its own ledger. Evidence found later goes into a new batch, sealed by whoever holds custody; batch roots combine into one case root.</p></article>
+        <article class="card"><h3>Uploads with receipts</h3><p>Files of any format up to 1 GB, scanned on arrival, recorded with their hash and kept exactly as received. Nothing is ever converted.</p></article>
+        <article class="card"><h3>Trace</h3><p>The incident as a UTC timeline built from sealed files, logs and Plaso or Autopsy exports. Events from changed evidence stay visible but marked untrusted.</p></article>
+        <article class="card"><h3>Case management</h3><p>Tasks, statuses, an operations queue and a notification bell, with roles for owner, admin, investigator and auditor.</p></article>
+        <article class="card"><h3>Complainant portal</h3><p>Victims file a complaint, get a tracking ID, follow its progress, add files and download the report once it is released to them.</p></article>
+        <article class="card"><h3>Signed reports and packages</h3><p>A signed PDF case report on demand, and an end-of-case zip with an offline checker that ends in PACKAGE VERIFIED or names the changed file.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- security -->
+  <section class="block" id="security">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">Security</p>
+        <h2>Proof, not promises</h2>
+        <p class="sub">Every claim on this page is checked by an automated suite of 60 attack and tamper scenarios, from an edited file to a forged ledger entry.</p>
+        <figure class="phone"><img src="assets/img/phone.webp" width="780" height="1688" alt="Hasfragis on a phone: the Control room with the bottom dock"></figure>
+      </div>
+      <ul class="checks">
+        <li><b>SHA-256 and Merkle trees.</b> Domain-separated, so a file can never pose as a branch. A proof for any single file runs up to the case root.</li>
+        <li><b>Signed, hash-chained ledger.</b> ECDSA P-256 over canonical JSON; each entry carries the hash of the one before. Removing or reordering one breaks the chain.</li>
+        <li><b>Off-system anchors.</b> Ledger heads are copied outside the machine, so even a full rewrite of the database is caught.</li>
+        <li><b>Two-step sign-in.</b> Password plus an authenticator code, with email codes and one-time backup codes; codes are stored only as hashes.</li>
+        <li><b>Approved accounts only.</b> Sign-ups wait for an admin; new accounts activate with an expiring six-digit code and get a permanent user ID.</li>
+        <li><b>Team-only access.</b> The dashboard is reachable only inside the team's private network, never from the open internet.</li>
+        <li><b>Locked-down pages.</b> A strict content security policy with no inline scripts, CSRF protection, and an activity log that is itself hash-chained.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- tech -->
+  <section class="block alt" id="tech">
+    <div class="wrap">
+      <p class="eyebrow">Under the hood</p>
+      <h2>Plain, auditable technology</h2>
+      <ul class="chips" aria-label="Technologies">
+        <li>Python</li><li>Flask</li><li>SQLite</li><li>cryptography (ECDSA P-256)</li><li>SHA-256</li><li>Merkle trees</li>
+        <li>ReportLab PDF</li><li>TOTP (RFC 6238)</li><li>Tailscale</li><li>Plaso import</li><li>Autopsy import</li><li>Git anchors</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- team -->
+  <section class="block" id="team">
+    <div class="wrap">
+      <p class="eyebrow">The team</p>
+      <h2>Built by four</h2>
+      <ul class="team">
+        <li><img src="assets/img/ksb.webp" width="96" height="96" alt=""><span class="name">Krupakar S B</span><span class="role">Project lead · Interface design</span></li>
+        <li><img src="assets/img/djm.webp" width="96" height="96" alt=""><span class="name">Deepak J M</span><span class="role">Developer</span></li>
+        <li><img src="assets/img/msn.webp" width="96" height="96" alt=""><span class="name">Manohar S Naik</span><span class="role">Developer</span></li>
+        <li><img src="assets/img/nua.webp" width="96" height="96" alt=""><span class="name">Nandivardhan U A</span><span class="role">Developer</span></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="brand" href="#top" aria-label="Hasfragis, back to top">
+      <span class="mark" aria-hidden="true"><span class="logo"></span></span>
+      <span class="word">Hasfragis</span>
+    </a>
+    <p>© 2026 Deepak J M, Krupakar S B, Manohar S Naik and Nandivardhan U A. All rights reserved.<br>
+      The Hasfragis source code is private. Screens show fictional demo data.</p>
+  </div>
+</footer>
+
+<script src="assets/line-globe.js" defer></script>
+<script src="assets/site.js" defer></script>
+</body>
+</html>
