@@ -13,4 +13,4 @@ Plain HTML, CSS and a little JavaScript; no build step. The Hasfragis source cod
 
 Publishing: Settings → Pages → Deploy from a branch → `main` / `(root)`.
 
-© 2026 Deepak J M, Krupakar S B, Manohar S Naik and Nandivardhan U A. All rights reserved.
+© 2026 Krupakar S B, Manohar S Naik, Deepak J M and Nandivardhan U A. All rights reserved.
